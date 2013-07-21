@@ -1,5 +1,5 @@
 //
-//  PVNetworking.m
+//  AVPlayer+PVNetworking.h
 //
 //  Copyright (c) 2013 Inndevers. All rights reserved.
 //
@@ -21,17 +21,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <AVFoundation/AVFoundation.h>
 #import "PVNetworking.h"
-#import "PVCache.h"
 
-@implementation PVNetworking
-@synthesize delegate;
+@interface AVPlayer (PVNetworking)
 
-- (void) queryVideosWithClassName:(NSString*)className {
-    
-    PFQuery *queryVideos = [PFQuery queryWithClassName:className];
-    [queryVideos findObjectsInBackgroundWithTarget:self.delegate selector:@selector(queryCompleteWithResult:error:)];
-    
-}
+- (void) setVideoWithObject:(PFObject *)object forFieldName:(NSString*)fieldName;
 
 @end

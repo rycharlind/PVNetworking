@@ -1,5 +1,5 @@
 //
-//  PVNetworking.m
+//  PVCache.h
 //
 //  Copyright (c) 2013 Inndevers. All rights reserved.
 //
@@ -21,17 +21,13 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "PVNetworking.h"
-#import "PVCache.h"
+#import <Foundation/Foundation.h>
 
-@implementation PVNetworking
-@synthesize delegate;
+@interface PVCache : NSObject
 
-- (void) queryVideosWithClassName:(NSString*)className {
-    
-    PFQuery *queryVideos = [PFQuery queryWithClassName:className];
-    [queryVideos findObjectsInBackgroundWithTarget:self.delegate selector:@selector(queryCompleteWithResult:error:)];
-    
-}
++ (NSURL*) cacheData:(NSData*)data withName:(NSString*)name;
++ (NSURL*) getCachedVideoUrlWithName:(NSString*)name;
++ (long long) getFileSizeAtPath:(NSString*)path;
++ (BOOL) fileExist:(NSString*)name;
 
 @end

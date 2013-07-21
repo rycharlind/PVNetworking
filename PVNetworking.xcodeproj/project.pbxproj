@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		54173BCD179BB5AF004604B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54173BCC179BB5AF004604B6 /* Foundation.framework */; };
-		54173BD2179BB5AF004604B6 /* PVNetworking.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 54173BD1179BB5AF004604B6 /* PVNetworking.h */; };
-		54173BD4179BB5AF004604B6 /* PVNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 54173BD3179BB5AF004604B6 /* PVNetworking.m */; };
+		54173BE0179BB5CA004604B6 /* PVNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 54173BDB179BB5CA004604B6 /* PVNetworking.m */; };
+		54173BE1179BB5CA004604B6 /* PVCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 54173BDD179BB5CA004604B6 /* PVCache.m */; };
+		54173BE2179BB5CA004604B6 /* AVPlayer+PVNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 54173BDF179BB5CA004604B6 /* AVPlayer+PVNetworking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,7 +20,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				54173BD2179BB5AF004604B6 /* PVNetworking.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29,8 +29,12 @@
 		54173BC9179BB5AF004604B6 /* libPVNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPVNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		54173BCC179BB5AF004604B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		54173BD0179BB5AF004604B6 /* PVNetworking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PVNetworking-Prefix.pch"; sourceTree = "<group>"; };
-		54173BD1179BB5AF004604B6 /* PVNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PVNetworking.h; sourceTree = "<group>"; };
-		54173BD3179BB5AF004604B6 /* PVNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PVNetworking.m; sourceTree = "<group>"; };
+		54173BDA179BB5CA004604B6 /* PVNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVNetworking.h; sourceTree = "<group>"; };
+		54173BDB179BB5CA004604B6 /* PVNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVNetworking.m; sourceTree = "<group>"; };
+		54173BDC179BB5CA004604B6 /* PVCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVCache.h; sourceTree = "<group>"; };
+		54173BDD179BB5CA004604B6 /* PVCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVCache.m; sourceTree = "<group>"; };
+		54173BDE179BB5CA004604B6 /* AVPlayer+PVNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayer+PVNetworking.h"; sourceTree = "<group>"; };
+		54173BDF179BB5CA004604B6 /* AVPlayer+PVNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer+PVNetworking.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +77,12 @@
 		54173BCE179BB5AF004604B6 /* PVNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				54173BD1179BB5AF004604B6 /* PVNetworking.h */,
-				54173BD3179BB5AF004604B6 /* PVNetworking.m */,
+				54173BDA179BB5CA004604B6 /* PVNetworking.h */,
+				54173BDB179BB5CA004604B6 /* PVNetworking.m */,
+				54173BDC179BB5CA004604B6 /* PVCache.h */,
+				54173BDD179BB5CA004604B6 /* PVCache.m */,
+				54173BDE179BB5CA004604B6 /* AVPlayer+PVNetworking.h */,
+				54173BDF179BB5CA004604B6 /* AVPlayer+PVNetworking.m */,
 				54173BCF179BB5AF004604B6 /* Supporting Files */,
 			);
 			path = PVNetworking;
@@ -139,7 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54173BD4179BB5AF004604B6 /* PVNetworking.m in Sources */,
+				54173BE0179BB5CA004604B6 /* PVNetworking.m in Sources */,
+				54173BE1179BB5CA004604B6 /* PVCache.m in Sources */,
+				54173BE2179BB5CA004604B6 /* AVPlayer+PVNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
