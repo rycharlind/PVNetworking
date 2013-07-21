@@ -4,7 +4,7 @@ Parse Video Networking Library
 PVNetworking is an easy to use networking library for iOS.  It's built on top of the Parse framework and is used for
 integrating videos from Parse.com into your app.  
 
-It has a well designed modular architecture that utlizes asyncronous web requests and file caching methods.  By harnessing
+It has a well designed modular architecture that utlizes asynchronous web requests and file caching methods.  By harnessing
 iOS Category classes, it allows apps to efficiently display videos from the web inside an AVPlayer object.
 
 ```objective-c
