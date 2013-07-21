@@ -19,7 +19,7 @@ You can download the Parse framework from the following link:  https://www.parse
 Simply download the zip file and drag and drop the PVNetworking directory into your project.  Next make sure that the 
 implemantation files have been added to your Compile Sources.  To do this, select your proect file, select your Target, 
 go into Build Phases, and expand the Compile Sources section.  If you do not see the PVNetworking (.m) file, click the 
-+ button to add them.
+plus button to add them.
 
 Once you have the library added, simply add the AVPlayer+PVNetworking.h file to the view controller you will be displaying
 videos in.  
