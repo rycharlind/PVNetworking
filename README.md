@@ -31,7 +31,51 @@ videos in.
 ## Example Usage
 This example will show you how to add videos to an AVPlayer object within a UITableViewController.  
 
-First step is to query your objects from Parse and set them in a NSArray.  
+First step is to query your objects from Parse and set them in an NSArray.  To do this you will want to add the 
+PVNetworkingDelegate protocol to your UITableViewController.
+
+```objective-c
+@interface MyTableViewController : UITableViewController <PVNetworkingDelegate>
+```
+
+Then implement the protocol method in your UITableViewController implementation file. 
+
+```objective-c
+- (void) queryCompleteWithResult:(NSArray*)result error:(NSError*)error {
+
+  self.objects = result;
+
+}
+```
+
+Then initialize a PVNetworking object inside the viewDidLoad method, set the delegate to self, and query your videos
+from Parse.
+
+```objective-c
+PVNetworking *pvn = [[PVNetworking alloc] init];
+pvn.delegate = self;
+[pvn queryVideosWithClassName:@"Video"];
+```
+
+Finally, call the Category method on your AVPlayer object inside the UITableViewController cellForRow method.  This method
+takes two parameter:  
+  - videoWithObject - The object (or row) returned from your Parse query.
+  - fieldName - The field name that contains the video file in the Parse table.
+
+```objective-c
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  
+  CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier]; 
+  if (cell == nil) {
+     cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+  }
+
+  PFObject *object = [self.objects objectAtIndex:indexPath.row];
+
+  [cell.avPlayer setVideoWithObject:object forFieldName:@"video"];
+
+}
+```
 
 
 
