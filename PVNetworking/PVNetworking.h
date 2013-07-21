@@ -24,6 +24,12 @@
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
 
+@protocol PVNetworkingDelegate <NSObject>
+
+- (void) queryCompleteWithResult:(NSArray*)result error:(NSError*)error;
+
+@end
+
 @interface PVNetworking : NSObject
 
 @property (nonatomic, strong) id delegate;
